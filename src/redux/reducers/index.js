@@ -5,7 +5,7 @@ const songsReducer = () => {
         { title: 'Smells Like Teen Spirit', duration: '4:05' },
         { title: 'All Star', duration: '4:45' },
         { title: 'No Scrubs', duration: '3:50'},
-        { title: '', duration: '4:35' },
+        { title: 'Possom Kingdom', duration: '4:35' },
     ];
 }
 
