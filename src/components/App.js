@@ -1,10 +1,12 @@
 import React from 'react';
 import SongList from './SongList';
 import SongDetails from './SongDetails';
+import PostList from './PostList';
 
 const App = () => {
     return (
         <div className="ui container grid">
+            <PostList />
             <div className="ui row">
                 <div className="column eight wide">
                     <SongList />
