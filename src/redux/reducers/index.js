@@ -16,6 +16,12 @@ const selectedSongReducer = (selectedSong = null, action) => {
     return selectedSong;
 }
 
+const postListReducer = (dummy, action) => {
+    if (action.type === 'FETCH_POSTS') {
+        return action.payload
+    }
+}
+
 export default combineReducers({
     songs: songsReducer,
     selectedSong: selectedSongReducer,
