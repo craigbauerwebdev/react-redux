@@ -1,2 +1,2 @@
 # react-redux
-React Redux Example
+React Redux Example and project for exploring redux.
