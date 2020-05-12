@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
- 
+//all reducers get called on init 
 const songsReducer = () => {
     return [
         { title: 'Smells Like Teen Spirit', duration: '4:05' },
@@ -9,6 +9,7 @@ const songsReducer = () => {
     ];
 }
 
+//reducers may not return undefined
 const selectedSongReducer = (selectedSong = null, action) => {
     if(action.type === 'SONG_SELECTED') {
         return action.payload;
@@ -16,14 +17,16 @@ const selectedSongReducer = (selectedSong = null, action) => {
     return selectedSong;
 }
 
-const postListReducer = (dummy, action) => {
+const postListReducer = (state = null, action) => {
     if (action.type === 'FETCH_POSTS') {
         return action.payload
     }
+    return state;
 }
 
 export default combineReducers({
     songs: songsReducer,
     selectedSong: selectedSongReducer,
+    posts: postListReducer,
     dummYReducer: () => 9
 });

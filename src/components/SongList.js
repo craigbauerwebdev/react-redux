@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { selectSong } from '../redux/actions';
+import { selectSong, fetchPosts } from '../redux/actions';
+//import fetchPosts from '../redux/actions';
 
 class SongList extends Component {
 
@@ -32,13 +33,11 @@ class SongList extends Component {
 const mapStateToProps = (state) => {
     console.log(state);
     return {
-        songs: state.songs
+        songs: state.songs,
+        posts: state.posts
     }
-    
-    //return state;
-
 }
 export default connect(
     mapStateToProps, 
-    { selectSong } //calls dispatch function
+    { selectSong, fetchPosts } //calls dispatch function and adds action creators that have been imported as named functions
 )(SongList);
